@@ -242,6 +242,22 @@ ul {
 
 .profile-placeholder {
     width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+
+.profile-photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    /* Focus on face */
+    border: 3px solid var(--accent-color);
+    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+    display: block;
+    margin: 0 auto;
 }
 
 .section-title {
@@ -280,6 +296,21 @@ ul {
     top: 5px;
     width: 16px;
     height: 16px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
     transition: var(--transition);
 }
 
@@ -302,6 +333,70 @@ ul {
     display: inline-flex;
     align-items: center;
     gap: 8px;
+}
+
+/* Hobbies */
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    justify-content: center;
+}
+
+.hobby-card {
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    display: block;
+    /* Ensure anchor tag behaves like a block */
+    text-decoration: none;
+    /* Remove underline from links */
+    color: inherit;
+    /* Inherit text color */
+}
+
+.hobby-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-color: var(--accent-color);
+}
+
+.hobby-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+    display: block;
+}
+
+.hobby-card:hover .hobby-image {
+    transform: scale(1.05);
+}
+
+.hobby-card h3 {
+    color: var(--heading-color);
+    margin-bottom: 0.5rem;
+}
+
+.skill-icon {
+    color: var(--accent-color);
+    margin-right: 8px;
+    font-size: 1.1rem;
+}
+
+.hobby-item {
+    background: var(--card-bg);
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 /* Family */
