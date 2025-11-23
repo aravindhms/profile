@@ -242,22 +242,6 @@ ul {
 
 .profile-placeholder {
     width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    margin: 0 auto;
-}
-
-.profile-photo {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center top;
-    /* Focus on face */
-    border: 3px solid var(--accent-color);
-    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
-    display: block;
-    margin: 0 auto;
 }
 
 .section-title {
@@ -296,21 +280,6 @@ ul {
     top: 5px;
     width: 16px;
     height: 16px;
-    border-radius: 50%;
-    background-color: var(--accent-color);
-}
-
-/* Projects Grid */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
-}
-
-.project-card {
-    background-color: var(--card-bg);
-    border-radius: 8px;
-    overflow: hidden;
     transition: var(--transition);
 }
 
