@@ -15,17 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (mobileBtn) {
         mobileBtn.addEventListener('click', () => {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            if (navLinks.style.display === 'flex') {
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '100%';
-                navLinks.style.right = '0';
-                navLinks.style.backgroundColor = 'var(--bg-color)';
-                navLinks.style.padding = '20px';
-                navLinks.style.width = '100%';
-                navLinks.style.boxShadow = '0 10px 30px -10px rgba(2,12,27,0.7)';
-            }
+            navLinks.classList.toggle('active');
+            mobileBtn.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileBtn.textContent = '☰';
+            });
         });
     }
 });
