@@ -182,35 +182,28 @@ ul {
 
 .typing-text {
     display: inline-block;
-    overflow: hidden;
-    border-right: 3px solid var(--accent-color);
-    white-space: nowrap;
-    width: 0;
-    animation:
-        typing 2.5s steps(17, end) forwards,
-        blink-caret 0.75s step-end infinite;
     vertical-align: bottom;
+    position: relative;
 }
 
-@keyframes typing {
-    from {
-        width: 0
-    }
-
-    to {
-        width: 100%
-    }
+.typing-text::after {
+    content: "|";
+    display: inline-block;
+    color: var(--accent-color);
+    animation: blink-caret 0.75s step-end infinite;
+    margin-left: 2px;
+    font-weight: 100;
 }
 
 @keyframes blink-caret {
 
     from,
     to {
-        border-color: transparent
+        opacity: 0;
     }
 
     50% {
-        border-color: var(--accent-color)
+        opacity: 1;
     }
 }
 
