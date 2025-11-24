@@ -165,14 +165,14 @@ ul {
 }
 
 .typing-text {
+    display: inline-block;
     overflow: hidden;
     border-right: 3px solid var(--accent-color);
     white-space: nowrap;
-    margin: 0 auto;
+    width: 0;
     animation:
-        typing 2.5s steps(17, end),
+        typing 2.5s steps(17, end) forwards,
         blink-caret 0.75s step-end infinite;
-    max-width: 100%;
 }
 
 @keyframes typing {
