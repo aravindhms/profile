@@ -173,6 +173,7 @@ ul {
     animation:
         typing 2.5s steps(17, end) forwards,
         blink-caret 0.75s step-end infinite;
+    vertical-align: bottom;
 }
 
 @keyframes typing {
