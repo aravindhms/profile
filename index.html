@@ -28,6 +28,7 @@
 </head>
 
 <body>
+    <canvas id="particles-canvas"></canvas>
     <header id="main-header">
         <nav class="container">
             <div class="logo">Aravindh Muthayan</div>
@@ -44,7 +45,6 @@
 
     <main>
         <section id="hero">
-            <canvas id="particles-canvas"></canvas>
             <div class="container hero-content">
                 <div class="hero-grid">
                     <div class="hero-text">
@@ -144,40 +144,47 @@
                 <h2 class="section-title">Key Initiatives</h2>
                 <div class="projects-grid">
                     <article class="project-card">
-                        <div class="project-image"
-                            style="background: linear-gradient(45deg, #112240, #233554); display: flex; align-items: center; justify-content: center; color: var(--accent-color); font-size: 3rem;">
-                            ⚙️</div>
+                        <div class="project-image">
+                            <img src="assets/support_automation_icon.png" alt="Support Automation" loading="lazy">
+                        </div>
                         <div class="project-info">
                             <h3>Support Automation</h3>
-                            <p>Implemented automation using Shell/Python scripts and Rundeck,
-                                reducing manual support
-                                activities by 30%.</p>
-                            <a href="https://github.com/aravindhms/prod-support-automation-pack" target="_blank"
-                                class="btn primary-btn project-btn">View Code <i class="fab fa-github"></i></a>
+                            <p>Automation tools and runbooks to streamline support workflows and reduce manual toil.</p>
+                            <p class="project-links">
+                                <a class="code-btn" href="https://github.com/aravindhms/prod-support-automation-pack" target="_blank" rel="noopener" aria-label="View code for Support Automation">
+                                    View Code <i class="fab fa-github" aria-hidden="true"></i>
+                                </a>
+                            </p>
                         </div>
                     </article>
+
                     <article class="project-card">
-                        <div class="project-image"
-                            style="background: linear-gradient(45deg, #112240, #233554); display: flex; align-items: center; justify-content: center; color: var(--accent-color); font-size: 3rem;">
-                            📷</div>
+                        <div class="project-image">
+                            <img src="assets/photosort_icon.png" alt="Photo Sort" loading="lazy">
+                        </div>
                         <div class="project-info">
                             <h3>PhotoSort</h3>
-                            <p>A smart tool to organize and sort your photo collection automatically.</p>
-                            <a href="https://github.com/aravindhms/PhotoSort" target="_blank"
-                                class="btn primary-btn project-btn">View
-                                Code <i class="fab fa-github"></i></a>
+                            <p>Image organization utility for photographers — automated sorting, tagging, and exports.</p>
+                            <p class="project-links">
+                                <a class="code-btn" href="https://github.com/aravindhms/PhotoSort" target="_blank" rel="noopener" aria-label="View code for PhotoSort">
+                                    View Code <i class="fab fa-github" aria-hidden="true"></i>
+                                </a>
+                            </p>
                         </div>
                     </article>
+
                     <article class="project-card">
-                        <div class="project-image"
-                            style="background: linear-gradient(45deg, #112240, #233554); display: flex; align-items: center; justify-content: center; color: var(--accent-color); font-size: 3rem;">
-                            🖼️</div>
+                        <div class="project-image">
+                            <img src="assets/django_gallery_icon.png" alt="Django Gallery" loading="lazy">
+                        </div>
                         <div class="project-info">
                             <h3>Django Gallery</h3>
-                            <p>A Django-based image gallery application with categories and location-based filtering.
+                            <p>Gallery application built with Django for fast image serving and metadata management.</p>
+                            <p class="project-links">
+                                <a class="code-btn" href="https://github.com/aravindhms/djangogallery" target="_blank" rel="noopener" aria-label="View code for Django Gallery">
+                                    View Code <i class="fab fa-github" aria-hidden="true"></i>
+                                </a>
                             </p>
-                            <a href="https://github.com/aravindhms/djangogallery" target="_blank"
-                                class="btn primary-btn project-btn">View Code <i class="fab fa-github"></i></a>
                         </div>
                     </article>
                 </div>
@@ -224,7 +231,9 @@
         <section id="contact">
             <div class="container">
                 <h2 class="section-title">Let's Connect</h2>
+
                 <div style="margin-bottom: 30px; color: var(--text-color);">
+                    <p>📞 <a href="tel:+919840693143" class="text-btn">+91 9840693143</a></p>
                     <p>📧 <a href="mailto:aravindhms1@gmail.com" class="text-btn">aravindhms1@gmail.com</a></p>
                     <p>📍 Chennai, India</p>
                     <p style="margin-top: 10px;">

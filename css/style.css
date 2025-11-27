@@ -143,13 +143,16 @@ ul {
     overflow: hidden;
 }
 
+/* Particles canvas covers entire viewport, sits behind content and doesn't block interactions */
 #particles-canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: fixed;
+    inset: 0;                 /* top:0; right:0; bottom:0; left:0 */
     width: 100%;
     height: 100%;
     z-index: -1;
+    pointer-events: none;     /* allow clicks through canvas */
+    display: block;
+    background: transparent;
 }
 
 .hero-content {
@@ -312,39 +315,95 @@ ul {
     background-color: var(--accent-color);
 }
 
-/* Projects Grid */
+/* Projects grid & cards */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-lg);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+    align-items: start;
 }
 
+/* Card look: base (no neon stroke) */
 .project-card {
-    background-color: var(--card-bg);
-    border-radius: 8px;
-    overflow: hidden;
-    transition: var(--transition);
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-.project-image {
-    height: 200px;
-    background-color: #233554;
-}
-
-.project-info {
-    padding: var(--spacing-md);
-}
-
-.project-btn {
-    margin-top: var(--spacing-md);
-    font-size: 0.9rem;
-    display: inline-flex;
+    background: linear-gradient(180deg, #071827 0%, #0b2b3a 100%);
+    border-radius: 14px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 8px;
+    text-align: center;
+    gap: 1rem;
+    max-width: 320px;
+    margin: 0 auto;
+
+    /* faster transition for stroke appearance */
+    border: 1px solid transparent;
+    box-shadow: 0 10px 30px rgba(2,8,16,0.6);
+    transition: transform 110ms ease, box-shadow 110ms ease, border-color 110ms ease;
+}
+
+/* Card hover: show neon outer stroke + inner edge */
+.project-card:hover,
+.project-card:focus-within {
+    transform: translateY(-6px);
+    border-color: rgba(34,243,210,0.08);
+    box-shadow:
+        0 0 0 2px rgba(34,243,210,0.12),
+        inset 0 0 0 1px rgba(34,243,210,0.9),
+        0 14px 36px rgba(2,8,16,0.68);
+    transition: transform 110ms ease, box-shadow 110ms ease, border-color 110ms ease;
+}
+
+/* Remove white inset around project image */
+/* Image zoom on hover */
+.project-image {
+    overflow: hidden;        /* prevent scaled image from overflowing */
+    border-radius: 12px;
+}
+
+.project-image img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 350ms cubic-bezier(.2,.9,.2,1), filter 350ms;
+    will-change: transform;
+    transform-origin: center center;
+}
+
+/* Small zoom when card is hovered or focused */
+.project-card:hover .project-image img,
+.project-card:focus-within .project-image img {
+    transform: scale(1.06);
+}
+
+/* Title styling — centered and slightly larger */
+.project-info h3 {
+    margin: 0.4rem 0 0;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #e6f6f4;
+}
+
+/* Description: lighter, comfortable line-height */
+.project-info p {
+    margin: 0 0 0.75rem; /* add bottom gap under text */
+    color: rgba(230,246,244,0.78);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    padding: 0 0.25rem;
+}
+
+/* Center the project button */
+.project-links {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center; /* center button horizontally */
+    width: 100%;             /* ensure full-width container for proper centering */
+    gap: 0.5rem;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 /* Hobbies */
@@ -464,6 +523,49 @@ ul {
     /* Remove line for centered title */
 }
 
+/* Exact visible "View Code" button style (matches attached image) */
+.code-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.56rem 0.92rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: #39f0d8;                         /* teal text */
+    background: rgba(6, 20, 36, 0.85);      /* dark, slightly translucent to match page */
+    border: 1px solid transparent; /* no visible stroke by default */
+    box-shadow: 0 4px 10px rgba(2,8,16,0.45);
+    -webkit-font-smoothing: antialiased;
+    transition: transform 120ms ease, box-shadow 140ms ease, border-color 140ms ease;
+}
+
+/* icon color and sizing */
+.code-btn i {
+    color: #39f0d8;
+    font-size: 1.05rem;
+    line-height: 1;
+}
+
+/* hover/focus: tiny lift, keep the neon inner stroke visible */
+.code-btn:hover,
+.code-btn:focus {
+    transform: translateY(-2px);
+    border-color: rgba(57,240,216,0.22);
+    box-shadow:
+        inset 0 0 0 1px rgba(57,240,216,0.95), /* bright inner cyan stroke */
+        0 8px 20px rgba(2,8,16,0.55);
+    outline: none;
+}
+
+/* pressed state */
+.code-btn:active {
+    transform: translateY(0);
+    box-shadow:
+        inset 0 0 0 1px rgba(57,240,216,0.9),
+        0 4px 12px rgba(2,8,16,0.45);
+}
 
 /* Footer */
 footer {

@@ -151,10 +151,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const dx = particlesArray[i].x - particlesArray[j].x;
                 const dy = particlesArray[i].y - particlesArray[j].y;
                 const distance = Math.sqrt(dx * dx + dy * dy);
-                if (distance < 100) {
+                if (distance < 120) {
                     ctx.beginPath();
                     ctx.strokeStyle = `rgba(100, 255, 218, ${0.4 - distance / 1000})`;
-                    ctx.lineWidth = 1;
+                    ctx.lineWidth = 0.8;
                     ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
                     ctx.lineTo(particlesArray[j].x, particlesArray[j].y);
                     ctx.stroke();
@@ -230,4 +230,36 @@ document.addEventListener('DOMContentLoaded', () => {
     if (txtElement) {
         new TypeWriter(txtElement, words, wait);
     }
+
+    // Ensure particles canvas always matches the viewport size (high-DPI aware)
+    (function () {
+        const canvas = document.getElementById('particles-canvas');
+        if (!canvas) return;
+        const ctx = canvas.getContext && canvas.getContext('2d');
+        if (!ctx) return;
+
+        function resizeCanvas() {
+            const dpr = window.devicePixelRatio || 1;
+            const w = Math.max(1, window.innerWidth);
+            const h = Math.max(1, window.innerHeight);
+
+            canvas.width = Math.floor(w * dpr);
+            canvas.height = Math.floor(h * dpr);
+            canvas.style.width = w + 'px';
+            canvas.style.height = h + 'px';
+
+            // scale drawing operations to device pixels
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+            // optional hook for any existing particle system
+            if (window.particles && typeof window.particles.onResize === 'function') {
+                try { window.particles.onResize(w, h, dpr); } catch (e) { /* ignore */ }
+            }
+        }
+
+        window.addEventListener('resize', resizeCanvas, { passive: true });
+        window.addEventListener('orientationchange', resizeCanvas);
+        // initial sizing
+        resizeCanvas();
+    })();
 });
