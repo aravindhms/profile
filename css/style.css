@@ -320,7 +320,7 @@ ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.25rem;
-    align-items: start;
+    align-items: stretch;
 }
 
 /* Card look: base (no neon stroke) */
@@ -335,6 +335,7 @@ ul {
     gap: 1rem;
     max-width: 320px;
     margin: 0 auto;
+    height: 100%;
 
     /* faster transition for stroke appearance */
     border: 1px solid transparent;
@@ -377,6 +378,13 @@ ul {
     transform: scale(1.06);
 }
 
+/* Info wrapper for flexing content */
+.project-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
 /* Title styling — centered and slightly larger */
 .project-info h3 {
     margin: 0.4rem 0 0;
@@ -397,13 +405,14 @@ ul {
 
 /* Center the project button */
 .project-links {
-    margin-top: 1.5rem;
+    margin-top: auto;
     display: flex;
     justify-content: center; /* center button horizontally */
     width: 100%;             /* ensure full-width container for proper centering */
     gap: 0.5rem;
     align-items: center;
     flex-wrap: wrap;
+    padding-top: 1.5rem;
 }
 
 /* Hobbies */
