@@ -81,6 +81,18 @@ ul {
     background-color: rgba(100, 255, 218, 0.1);
 }
 
+.secondary-btn {
+    background-color: var(--secondary-bg);
+    border-color: rgba(100, 255, 218, 0.4);
+    color: var(--heading-color);
+}
+
+.secondary-btn:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    background-color: rgba(17, 34, 64, 0.95);
+}
+
 .text-btn {
     color: var(--accent-color);
     padding: 0;
@@ -121,6 +133,23 @@ ul {
 
 .nav-links a:hover {
     color: var(--accent-color);
+}
+
+.nav-resume-btn {
+    padding: 6px 14px;
+    border: 1px solid var(--accent-color);
+    border-radius: 4px;
+    color: var(--accent-color) !important;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.nav-resume-btn:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+    transform: translateY(-1px);
 }
 
 .mobile-menu-btn {
@@ -275,6 +304,34 @@ ul {
     animation: float 4s ease-in-out infinite;
 }
 
+/* Cursor Tracking Character */
+.character-wrapper {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.character-canvas {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-color);
+    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7), 0 0 25px rgba(100, 255, 218, 0.2);
+    display: block;
+    background-color: #0e0f13;
+    animation: float 4s ease-in-out infinite;
+    cursor: default;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.character-canvas:hover {
+    box-shadow: 0 15px 35px -10px rgba(2, 12, 27, 0.8), 0 0 30px rgba(100, 255, 218, 0.35);
+}
+
 .section-title {
     font-size: 2rem;
     margin-bottom: var(--spacing-xl);
@@ -297,6 +354,48 @@ ul {
 .timeline {
     border-left: 2px solid var(--secondary-bg);
     padding-left: var(--spacing-lg);
+}
+
+.timeline-header {
+    margin-bottom: 6px;
+}
+
+.timeline-header h3 {
+    margin-bottom: 3px;
+    font-size: 1.25rem;
+    color: var(--heading-color);
+}
+
+.timeline-header .company {
+    display: block;
+    color: #a8b2d1;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.timeline-header .date {
+    display: inline-block;
+    color: var(--accent-color);
+    font-size: 0.85rem;
+    font-family: var(--font-sans);
+    margin-top: 2px;
+}
+
+.role-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.role-tags .tag {
+    background-color: rgba(100, 255, 218, 0.08);
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    color: var(--heading-color);
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-family: var(--font-sans);
 }
 
 .timeline-item {
@@ -477,6 +576,62 @@ ul {
     align-items: center;
     justify-content: center;
     border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Skills Matrix */
+.skills-matrix {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--spacing-md);
+    margin-top: 1.5rem;
+}
+
+.skill-category-card {
+    background: var(--card-bg);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 12px;
+    padding: 1.25rem;
+    transition: var(--transition);
+}
+
+.skill-category-card:hover {
+    border-color: rgba(100, 255, 218, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(2, 12, 27, 0.4);
+}
+
+.skill-category-title {
+    color: var(--accent-color);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-sans);
+}
+
+.skill-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-pill {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--heading-color);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    font-family: var(--font-sans);
+    transition: var(--transition);
+}
+
+.skill-pill:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+    background: rgba(100, 255, 218, 0.06);
 }
 
 /* Family */
@@ -669,6 +824,15 @@ footer {
         width: 200px;
         height: 200px;
         margin-top: var(--spacing-lg);
+    }
+
+    .character-wrapper, .character-canvas {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-cta {
+        justify-content: center;
     }
 }
 

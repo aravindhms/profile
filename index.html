@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aravindh Muthayan</title>
+    <title>Aravindh MS - SRE & Technical Lead</title>
     <meta name="description"
-        content="Personal website of Aravindh Muthayan, an Engineer & Tech Enthusiast specializing in Python, Automation, and Azure. Showcasing professional details, projects, and hobbies.">
+        content="Personal website of Aravindh MS, SRE & Technical Lead specializing in Python automation, high-availability production support, cloud reliability (Azure), and ITIL practices.">
 
-    <meta property="og:title" content="Aravindh Muthayan - Engineer & Tech Enthusiast">
-    <meta property="og:description" content="Personal website showcasing my journey in Automation, Python, and Azure.">
+    <meta property="og:title" content="Aravindh MS - SRE & Technical Lead">
+    <meta property="og:description" content="Personal website showcasing my journey in SRE, Automation, Python, and Cloud Reliability.">
     <meta property="og:image" content="https://aravindhms.github.io/profile/assets/profile.png">
     <meta property="og:url" content="https://aravindhms.github.io/profile/">
     <meta property="og:type" content="website">
@@ -19,11 +19,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+
     <link rel="icon" href="assets/profile.png" type="image/png">
 </head>
 
@@ -31,13 +32,19 @@
     <canvas id="particles-canvas"></canvas>
     <header id="main-header">
         <nav class="container">
-            <div class="logo">Aravindh Muthayan</div>
+            <div class="logo">Aravindh MS</div>
             <ul class="nav-links">
                 <li><a href="#hero">Home</a></li>
-                <li><a href="#professional">Professional</a></li>
+                <li><a href="#professional">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#hobbies">Hobbies</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="assets/Aravindh_MS_Resume.pdf" target="_blank" rel="noopener" class="nav-resume-btn">
+                        <i class="fas fa-file-pdf"></i> Resume
+                    </a>
+                </li>
             </ul>
             <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
         </nav>
@@ -48,19 +55,23 @@
             <div class="container hero-content">
                 <div class="hero-grid">
                     <div class="hero-text">
-                        <h1 class="animate-fade-up">Hello, I'm <span class="highlight">Aravindh Muthayan</span></h1>
+                        <h1 class="animate-fade-up">Hello, I'm <span class="highlight">Aravindh MS</span></h1>
                         <p class="subtitle animate-fade-up delay-1"><span class="typing-text"></span></p>
                         <p class="bio animate-fade-up delay-2"
-                            style="font-size: 1.2rem; margin-bottom: 2rem; color: var(--text-color);">
-                            Engineer by profession, photographer by passion. I build scalable
-                            solutions and capture
-                            life's fleeting moments.
+                            style="font-size: 1.15rem; margin-bottom: 2rem; color: var(--text-color); line-height: 1.7; max-width: 560px;">
+                            SRE & Application Support Technical Lead with 10+ years of experience managing, automating, and driving resilience for mission-critical systems across FinTech, Healthcare, and IT. Photographer by passion.
                         </p>
-                        <a href="#contact" class="btn primary-btn animate-fade-up delay-2">Get in
-                            Touch</a>
+                        <div class="hero-cta animate-fade-up delay-2" style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                            <a href="#contact" class="btn primary-btn">Get in Touch</a>
+                            <a href="assets/Aravindh_MS_Resume.pdf" target="_blank" rel="noopener" class="btn secondary-btn">
+                                <i class="fas fa-file-pdf" style="margin-right: 8px;"></i>View Resume
+                            </a>
+                        </div>
                     </div>
                     <div class="hero-image-container animate-fade-up delay-2">
-                        <img src="assets/profile.png" alt="Aravindh Muthayan" class="profile-photo">
+                        <div class="character-wrapper">
+                            <canvas id="cursor-character" class="character-canvas"></canvas>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -74,65 +85,161 @@
                 <h2 class="section-title">Professional Journey</h2>
 
                 <div class="timeline">
+                    <!-- Role 1: TAO -->
                     <div class="timeline-item">
-                        <h3>Application Support Senior Analyst</h3>
-                        <span class="date">Citicorp Services India | Oct 2024 – Sep 2025</span>
-                        <p>Managed KNIME workflows, Appian-based applications, and led daily
-                            operational coordination.
-                            Mentored junior engineers and enhanced internal SOPs.</p>
+                        <div class="timeline-header">
+                            <h3>Technical Lead</h3>
+                            <span class="company">TAO Digital Solutions, Chennai</span>
+                            <span class="date">February 2026 – April 2026</span>
+                        </div>
+                        <p>Supported day-to-day SRE operations in a Healthcare IT environment, adhering to domain-specific compliance and data handling practices. Wrote Python scripts to automate recurring operational tasks, reducing manual toil for the team. Handled incident management activities including triaging, tracking, and resolving production issues in line with ITIL practices.</p>
+                        <div class="role-tags">
+                            <span class="tag">Healthcare IT</span>
+                            <span class="tag">Python Automation</span>
+                            <span class="tag">SRE Operations</span>
+                            <span class="tag">ITIL Practices</span>
+                        </div>
                     </div>
+
+                    <!-- Role 2: Citi -->
                     <div class="timeline-item">
-                        <h3>Senior Application Engineer</h3>
-                        <span class="date">PagoNxt Merchant Solutions | Apr 2020 – Sep 2024</span>
-                        <p>L2/L3 support for Payment & Risk applications. Led major incident
-                            resolution, automated daily
-                            activities using Rundeck/Python, and supported Azure cloud migration.
-                        </p>
+                        <div class="timeline-header">
+                            <h3>Application Support Senior Analyst</h3>
+                            <span class="company">Citicorp Services India Private Limited, Chennai</span>
+                            <span class="date">October 2024 – September 2025</span>
+                        </div>
+                        <p>Managed and validated stability for complex KNIME workflows, handling job scheduling and error resolution. Provided deployment support and troubleshooting for Appian-based applications. Led daily operational coordination during release windows and high-priority incidents, ensuring smooth handoffs. Participated in business continuity and disaster recovery (DR) planning to ensure application resilience. Mentored junior engineers and enhanced internal SOPs and documentation. Efficiently handled user service requests (access provisioning, data fetch) adhering to ITIL practices.</p>
+                        <div class="role-tags">
+                            <span class="tag">KNIME Workflows</span>
+                            <span class="tag">Appian</span>
+                            <span class="tag">DR Planning</span>
+                            <span class="tag">Release Coordination</span>
+                            <span class="tag">ITIL Service Requests</span>
+                            <span class="tag">SOP Modernization</span>
+                        </div>
                     </div>
+
+                    <!-- Role 3: PagoNxt -->
                     <div class="timeline-item">
-                        <h3>Associate – Projects</h3>
-                        <span class="date">Cognizant | Jun 2014 – Apr 2020</span>
-                        <p>Resolved incidents in a managed services model. Implemented automation
-                            reducing manual effort
-                            by 30% and improved operational performance.</p>
+                        <div class="timeline-header">
+                            <h3>Senior Application Engineer</h3>
+                            <span class="company">PagoNxt Merchant Solutions (Formerly WIRECARD), Chennai</span>
+                            <span class="date">April 2020 – September 2024</span>
+                        </div>
+                        <p>Spearheaded monitoring and alerting initiatives, reducing production incident response times by 40%. Engineered semi-automated deployment pipelines using Terraform and Jenkins, improving deployment speed and consistency. Coordinated with Data Center (DC) operations for disaster recovery testing and traffic management. Automated daily operational activities using Rundeck and Python scripts, improving service delivery efficiency. Directed deployment and release activities, applying Blue-Green deployment strategy and coordinating with release management for post-deployment validations. Provided L2/L3 support for Payment & Risk applications, investigating issues by analyzing API calls, database logs, and Control-M output. Assisted in cloud migration efforts by providing deployment assistance for key applications moving to Azure platforms.</p>
+                        <div class="role-tags">
+                            <span class="tag">Datadog</span>
+                            <span class="tag">Terraform</span>
+                            <span class="tag">Jenkins</span>
+                            <span class="tag">Rundeck</span>
+                            <span class="tag">Blue-Green Deployments</span>
+                            <span class="tag">Azure Migration</span>
+                            <span class="tag">Control-M</span>
+                            <span class="tag">Payment & Risk APIs</span>
+                        </div>
+                    </div>
+
+                    <!-- Role 4: Cognizant -->
+                    <div class="timeline-item">
+                        <div class="timeline-header">
+                            <h3>Associate – Projects</h3>
+                            <span class="company">Cognizant, Chennai</span>
+                            <span class="date">June 2014 – April 2020</span>
+                        </div>
+                        <p>Improved system reliability by proactively monitoring critical 24x7 jobs, successfully reducing downtime incidents by 40%. Drove operational efficiency by implementing automation functionalities using Shell/Python scripts and scheduling crontab jobs, which reduced manual support activities by 30%. Recognized for innovative problem-solving skills, implementing solutions that improved operational performance by 30% and boosted team productivity by 20%. Conducted Root Cause Analysis (RCA) on production issues and developed new application functionalities using Python, Informix, Unix, Shell Scripting, and SQL. Prepared project closure documents, including weekly status, monthly status, and KPI metrics reports.</p>
+                        <div class="role-tags">
+                            <span class="tag">24x7 Job Monitoring</span>
+                            <span class="tag">Shell / Python Automation</span>
+                            <span class="tag">crontab</span>
+                            <span class="tag">Root Cause Analysis</span>
+                            <span class="tag">Informix</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Unix / Linux</span>
+                        </div>
                     </div>
                 </div>
 
-                <div class="skills-container" style="margin-top: 40px;">
-                    <h3 style="margin-bottom: 20px; color: var(--heading-color);">Technical Skills
-                    </h3>
-                    <div class="hobbies-grid"> <!-- Reusing grid style for skills -->
-                        <div class="hobby-item"><i class="fab fa-python skill-icon"></i> Python &
-                            Shell Scripting</div>
-                        <div class="hobby-item"><i class="fas fa-database skill-icon"></i> SQL</div>
-                        <div class="hobby-item"><i class="fab fa-linux skill-icon"></i> Unix/Linux &
-                            Windows</div>
-                        <div class="hobby-item"><i class="fas fa-ticket-alt skill-icon"></i>
-                            ServiceNow & JIRA</div>
-                        <div class="hobby-item"><i class="fas fa-chart-line skill-icon"></i> Datadog
-                            & Splunk</div>
-                        <div class="hobby-item"><i class="fas fa-network-wired skill-icon"></i>
-                            Control-M</div>
-                        <div class="hobby-item"><i class="fas fa-chart-bar skill-icon"></i> Tableau
-                            & Power BI</div>
-                        <div class="hobby-item"><i class="fab fa-microsoft skill-icon"></i> Azure</div>
+                <!-- Technical Skills Section -->
+                <div id="skills" style="margin-top: 60px;">
+                    <h2 class="section-title">Technical Skills</h2>
+                    <div class="skills-matrix">
+                        <div class="skill-category-card">
+                            <div class="skill-category-title">
+                                <i class="fas fa-terminal"></i> Automation & Scripting
+                            </div>
+                            <div class="skill-pills">
+                                <span class="skill-pill">Python</span>
+                                <span class="skill-pill">UNIX Shell</span>
+                                <span class="skill-pill">crontab</span>
+                                <span class="skill-pill">Rundeck</span>
+                                <span class="skill-pill">Control-M</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category-card">
+                            <div class="skill-category-title">
+                                <i class="fas fa-chart-line"></i> Monitoring & Logging
+                            </div>
+                            <div class="skill-pills">
+                                <span class="skill-pill">Datadog</span>
+                                <span class="skill-pill">Kibana (ELK)</span>
+                                <span class="skill-pill">Splunk</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category-card">
+                            <div class="skill-category-title">
+                                <i class="fas fa-tools"></i> Platform & Tools
+                            </div>
+                            <div class="skill-pills">
+                                <span class="skill-pill">ServiceNow</span>
+                                <span class="skill-pill">BMC Remedy</span>
+                                <span class="skill-pill">JIRA</span>
+                                <span class="skill-pill">KNIME</span>
+                                <span class="skill-pill">Appian</span>
+                                <span class="skill-pill">Tableau</span>
+                                <span class="skill-pill">Power BI</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category-card">
+                            <div class="skill-category-title">
+                                <i class="fab fa-microsoft"></i> Cloud & DevOps
+                            </div>
+                            <div class="skill-pills">
+                                <span class="skill-pill">Azure (Migration Support)</span>
+                                <span class="skill-pill">Terraform</span>
+                                <span class="skill-pill">Jenkins</span>
+                                <span class="skill-pill">CI/CD Pipelines</span>
+                                <span class="skill-pill">Confluence</span>
+                            </div>
+                        </div>
+
+                        <div class="skill-category-card">
+                            <div class="skill-category-title">
+                                <i class="fas fa-shield-alt"></i> Standards & Operating Systems
+                            </div>
+                            <div class="skill-pills">
+                                <span class="skill-pill">ITIL (Incident, Change, Problem, Request)</span>
+                                <span class="skill-pill">Linux / Unix</span>
+                                <span class="skill-pill">Windows</span>
+                                <span class="skill-pill">SQL / Informix</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="education-container" style="margin-top: 40px;">
+                <!-- Education -->
+                <div class="education-container" style="margin-top: 60px;">
                     <h3 style="margin-bottom: 20px; color: var(--heading-color);">Education</h3>
                     <ul style="list-style: none; padding-left: 0;">
-                        <li style="margin-bottom: 15px;">
-                            <strong>M.E. Computer and Communication</strong><br>
-                            <span style="color: var(--text-color); font-size: 0.9rem;">Sri
-                                Sivasubramaniya Nadar College
-                                of Engineering (2014)</span>
+                        <li style="margin-bottom: 18px;">
+                            <strong style="color: var(--heading-color); font-size: 1.05rem;">M.E. Computer and Communication</strong><br>
+                            <span style="color: var(--text-color); font-size: 0.95rem;">Sri Sivasubramaniya Nadar College of Engineering, Chennai (June 2014)</span>
                         </li>
                         <li>
-                            <strong>B.E. Electronics and Communication</strong><br>
-                            <span style="color: var(--text-color); font-size: 0.9rem;">SKR
-                                Engineering College
-                                (2011)</span>
+                            <strong style="color: var(--heading-color); font-size: 1.05rem;">B.E. Electronics and Communication</strong><br>
+                            <span style="color: var(--text-color); font-size: 0.95rem;">SKR Engineering College, Chennai (June 2011)</span>
                         </li>
                     </ul>
                 </div>
@@ -148,10 +255,11 @@
                             <img src="assets/support_automation_icon.png" alt="Support Automation" loading="lazy">
                         </div>
                         <div class="project-info">
-                            <h3>Support Automation</h3>
-                            <p>Automation tools and runbooks to streamline support workflows and reduce manual toil.</p>
+                            <h3>Support Automation Pack</h3>
+                            <p>Python & Shell scripts automating batch monitoring, auto-recovery routines, and routine support tasks.</p>
                             <p class="project-links">
-                                <a class="code-btn" href="https://github.com/aravindhms/prod-support-automation-pack" target="_blank" rel="noopener" aria-label="View code for Support Automation">
+                                <a class="code-btn" href="https://github.com/aravindhms/prod-support-automation-pack"
+                                    target="_blank" rel="noopener" aria-label="View code for Support Automation">
                                     View Code <i class="fab fa-github" aria-hidden="true"></i>
                                 </a>
                             </p>
@@ -166,7 +274,8 @@
                             <h3>PhotoSort</h3>
                             <p>Image organization utility for photographers — automated sorting, tagging, and exports.</p>
                             <p class="project-links">
-                                <a class="code-btn" href="https://github.com/aravindhms/PhotoSort" target="_blank" rel="noopener" aria-label="View code for PhotoSort">
+                                <a class="code-btn" href="https://github.com/aravindhms/PhotoSort" target="_blank"
+                                    rel="noopener" aria-label="View code for PhotoSort">
                                     View Code <i class="fab fa-github" aria-hidden="true"></i>
                                 </a>
                             </p>
@@ -181,7 +290,8 @@
                             <h3>Django Gallery</h3>
                             <p>Gallery application built with Django for fast image serving and metadata management.</p>
                             <p class="project-links">
-                                <a class="code-btn" href="https://github.com/aravindhms/djangogallery" target="_blank" rel="noopener" aria-label="View code for Django Gallery">
+                                <a class="code-btn" href="https://github.com/aravindhms/djangogallery" target="_blank"
+                                    rel="noopener" aria-label="View code for Django Gallery">
                                     View Code <i class="fab fa-github" aria-hidden="true"></i>
                                 </a>
                             </p>
@@ -240,19 +350,19 @@
             <div class="container">
                 <h2 class="section-title">Hobbies & Interests</h2>
                 <div class="hobbies-grid">
-                    <a href="https://www.instagram.com/aravindhms/" target="_blank" class="hobby-card">
+                    <a href="https://www.instagram.com/aravindhms/" target="_blank" rel="noopener" class="hobby-card">
                         <img src="assets/hobby_photography.png" alt="Photography" class="hobby-image">
                         <h3>Photography</h3>
                     </a>
-                    <a href="https://github.com/aravindhms" target="_blank" class="hobby-card">
+                    <a href="https://github.com/aravindhms" target="_blank" rel="noopener" class="hobby-card">
                         <img src="assets/hobby_automation.png" alt="Tech Automation" class="hobby-image">
                         <h3>Tech Automation</h3>
                     </a>
-                    <a href="https://www.credly.com/users/aravindh-ms/" target="_blank" class="hobby-card">
+                    <a href="https://www.credly.com/users/aravindh-ms/" target="_blank" rel="noopener" class="hobby-card">
                         <img src="assets/hobby_learning.png" alt="Continuous Learning" class="hobby-image">
                         <h3>Continuous Learning</h3>
                     </a>
-                    <a href="https://www.amazon.in/hz/wishlist/ls/3LGNZ8PGMZCU2?ref_=wl_share" target="_blank"
+                    <a href="https://www.amazon.in/hz/wishlist/ls/3LGNZ8PGMZCU2?ref_=wl_share" target="_blank" rel="noopener"
                         class="hobby-card">
                         <img src="assets/hobby_gadgets.png" alt="Gadgets" class="hobby-image">
                         <h3>Gadgets</h3>
@@ -266,8 +376,8 @@
                 <h2 class="section-title">Family & Personal</h2>
                 <div class="family-content">
                     <p class="text-center"
-                        style="font-size: 1.2rem; margin-bottom: 30px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                        I live with my wife and two kids in Chennai. I Speak Tamil, English and Malayalam.
+                        style="font-size: 1.15rem; margin-bottom: 20px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                        I live with my wife and two kids in Gowrivakkam, Chennai (600073). I speak English, Tamil, and Malayalam.
                     </p>
                 </div>
             </div>
@@ -282,13 +392,13 @@
                     <p>📧 <a href="mailto:aravindhms1@gmail.com" class="text-btn">aravindhms1@gmail.com</a></p>
                     <p>📍 Chennai, India</p>
                     <p style="margin-top: 10px;">
-                        <a href="https://github.com/aravindhms" target="_blank" class="text-btn"
+                        <a href="https://github.com/aravindhms" target="_blank" rel="noopener" class="text-btn"
                             style="margin-right: 15px;"><i class="fab fa-github"></i> GitHub</a>
-                        <a href="https://www.instagram.com/aravindhms/" target="_blank" class="text-btn"
+                        <a href="https://www.instagram.com/aravindhms/" target="_blank" rel="noopener" class="text-btn"
                             style="margin-right: 15px;"><i class="fab fa-instagram"></i> Instagram</a>
-                        <a href="https://www.linkedin.com/in/aravindhms" target="_blank" class="text-btn"
+                        <a href="https://www.linkedin.com/in/aravindhms" target="_blank" rel="noopener" class="text-btn"
                             style="margin-right: 15px;"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                        <a href="https://wa.me/919840693143" target="_blank" class="text-btn"><i
+                        <a href="https://wa.me/919840693143" target="_blank" rel="noopener" class="text-btn"><i
                                 class="fab fa-whatsapp"></i> WhatsApp</a>
                     </p>
                 </div>
@@ -305,25 +415,26 @@
     <footer>
         <div class="container">
             <div class="social-links" style="margin-bottom: 1rem;">
-                <a href="https://github.com/aravindhms" target="_blank"
+                <a href="https://github.com/aravindhms" target="_blank" rel="noopener"
                     style="margin: 0 10px; font-size: 1.5rem; text-decoration: none; color: var(--text-color); transition: color 0.3s;"><i
                         class="fab fa-github"></i></a>
-                <a href="https://www.instagram.com/aravindhms/" target="_blank"
+                <a href="https://www.instagram.com/aravindhms/" target="_blank" rel="noopener"
                     style="margin: 0 10px; font-size: 1.5rem; text-decoration: none; color: var(--text-color); transition: color 0.3s;"><i
                         class="fab fa-instagram"></i></a>
-                <a href="https://www.linkedin.com/in/aravindhms" target="_blank"
+                <a href="https://www.linkedin.com/in/aravindhms" target="_blank" rel="noopener"
                     style="margin: 0 10px; font-size: 1.5rem; text-decoration: none; color: var(--text-color); transition: color 0.3s;"><i
                         class="fab fa-linkedin"></i></a>
-                <a href="https://wa.me/919840693143" target="_blank"
+                <a href="https://wa.me/919840693143" target="_blank" rel="noopener"
                     style="margin: 0 10px; font-size: 1.5rem; text-decoration: none; color: var(--text-color); transition: color 0.3s;"><i
                         class="fab fa-whatsapp"></i></a>
             </div>
-            <p>&copy; 2025 Aravindh. All rights reserved.</p>
+            <p>&copy; 2026 Aravindh MS. All rights reserved.</p>
         </div>
     </footer>
 
     <button id="back-to-top" aria-label="Back to Top"><i class="fas fa-arrow-up"></i></button>
     <script src="js/script.js"></script>
+    <script src="js/character.js"></script>
 </body>
 
 </html>

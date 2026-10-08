@@ -1,3 +1,5 @@
+
+
 document.addEventListener('DOMContentLoaded', () => {
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -224,7 +226,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Init TypeWriter
     const txtElement = document.querySelector('.typing-text');
-    const words = ["Engineer", "Tech Enthusiast", "Problem-Solving Geek", "Hobby Photographer", "Gadget Freak", "Calm Performer", "Automation Lover", "Cloud Curious"];
+    const words = [
+        "SRE & Production Support Lead",
+        "Automation & Reliability Specialist",
+        "Python & Shell Scripting Enthusiast",
+        "Incident Management & ITIL Expert",
+        "Cloud Curious (Azure)",
+        "Hobby Photographer",
+        "Problem-Solving Geek"
+    ];
     const wait = 2000;
 
     if (txtElement) {
